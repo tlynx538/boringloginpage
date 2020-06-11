@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
+<body bgcolor="red">
     <h1>Enter your user name and password</h1>
     {% block content %}
-    <form action="auth">
+    <form action="auth" method="POST">
+
+    {% csrf_token %}
     User Name : <input type="text" name="user"><br>
     Password : <input type="password" name="pass"><br>
     <input type="submit">
