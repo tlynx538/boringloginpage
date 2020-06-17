@@ -6,8 +6,9 @@
     <title>Success</title>
 </head>
 <body bgcolor="red">
-<h1>Congratulations</h1>
-<h2>You have by passed the pages</h2>        
-    
+{% block content %}   
+<h1>Congratulations! {{user}}</h1>
+<h2>You have by passed the pages.</h2>        
+{% endblock  %}     
 </body>
 </html>

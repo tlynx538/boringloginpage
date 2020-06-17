@@ -8,6 +8,6 @@ def authpass(request):
     user=request.POST['user']
     pass1=request.POST['pass']
     if(user=='admin' and pass1=='123'):
-        return render(request,'success.html')
+        return render(request,'success.html',{'user':user})
     else:
         return render(request,'forbidden.html')    
